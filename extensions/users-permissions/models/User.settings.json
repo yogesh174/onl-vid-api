@@ -59,13 +59,17 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "allocation": {
-      "via": "allocatedTo",
-      "model": "allocation"
+    "courses": {
+      "via": "owner",
+      "collection": "course"
     },
-    "allocationsMade": {
-      "via": "allocatedBy",
-      "collection": "allocation"
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
     }
   }
 }

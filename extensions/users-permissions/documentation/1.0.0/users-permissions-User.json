@@ -1188,7 +1188,9 @@
         "required": [
           "id",
           "username",
-          "email"
+          "email",
+          "firstName",
+          "lastName"
         ],
         "properties": {
           "id": {
@@ -1251,56 +1253,27 @@
               }
             }
           },
-          "allocation": {
-            "required": [
-              "id",
-              "allocatedOn"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "allocatedOn": {
-                "type": "string"
-              },
-              "allocatedTo": {
-                "type": "string"
-              },
-              "allocatedBy": {
-                "type": "string"
-              },
-              "hostel": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "allocationsMade": {
+          "courses": {
             "type": "array",
             "items": {
               "required": [
                 "id",
-                "allocatedOn"
+                "title"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "allocatedOn": {
+                "title": {
                   "type": "string"
                 },
-                "allocatedTo": {
+                "description": {
                   "type": "string"
                 },
-                "allocatedBy": {
+                "owner": {
                   "type": "string"
                 },
-                "hostel": {
+                "content": {
                   "type": "string"
                 },
                 "created_by": {
@@ -1311,13 +1284,21 @@
                 }
               }
             }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
           "username",
-          "email"
+          "email",
+          "firstName",
+          "lastName"
         ],
         "properties": {
           "username": {
@@ -1353,14 +1334,17 @@
           "role": {
             "type": "string"
           },
-          "allocation": {
-            "type": "string"
-          },
-          "allocationsMade": {
+          "courses": {
             "type": "array",
             "items": {
               "type": "string"
             }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
